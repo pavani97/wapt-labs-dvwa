@@ -26,9 +26,8 @@ To simulate a realistic **SQL Injection attack** on a controlled test environmen
 
 Initial reconnaissance was performed to identify the target system and available services.
 
-```bash
-nmap -sn <target_ip>
-nmap -sV <target_ip> ```
+   nmap -sn <target_ip>
+   nmap -sV <target_ip> 
 
 ### Step 2: Exploiting the Vulnerability
 
