@@ -28,7 +28,7 @@ Initial reconnaissance was performed to identify the target system and available
 
 ```bash
 nmap -sn <target_ip>
-nmap -sV <target_ip>
+nmap -sV <target_ip> ```
 
 ### Step 2: Exploiting the Vulnerability
 
