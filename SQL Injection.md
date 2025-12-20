@@ -62,7 +62,6 @@ Knowing that the application is vulnerable to SQL Injection, a malicious payload
 #### Normal Query Behavior
 When a legitimate input is provided, the backend SQL query executes as follows:
 
-```sql
 SELECT * FROM users WHERE id = '1';
 This query returns a single user record matching the given ID.
 
@@ -71,7 +70,7 @@ Modified Query After Injection
 The injected payload alters the logic of the query:
 SELECT * FROM users WHERE id = '1' OR '1'='1';
 Since the condition '1'='1' always evaluates to TRUE, the database returns all user records instead of a single entry.
-✅ Impact
+### ✅ Impact
 
 Authentication and input validation were bypassed
 
@@ -81,7 +80,7 @@ The attacker gained visibility into backend user data
 
 This demonstrates how improper input handling can lead to complete data disclosure.
 
-🕵️‍♂️ Step 3: Data Enumeration
+### 🕵️‍♂️ Step 3: Data Enumeration
 
 Once the injection was successful, it became possible to enumerate sensitive information, including:
 
@@ -89,10 +88,10 @@ Usernames
 
 User IDs
 
-⚠️ Important Note:
+### ⚠️ Important Note:
 Such actions would be illegal and unethical in a real-world production environment. However, DVWA provides a safe and authorized testing platform designed specifically for understanding and practicing exploitation techniques responsibly.
 
-🛡️ Security Recommendations
+### 🛡️ Security Recommendations
 
 To mitigate SQL Injection vulnerabilities, the following countermeasures are strongly recommended:
 
@@ -106,7 +105,7 @@ Deploy a Web Application Firewall (WAF)
 
 Apply the principle of least privilege to database accounts
 
-🧠 Reflection
+### 🧠 Reflection
 
 This exercise highlights how even a basic SQL Injection attack can have severe consequences if applications are not properly secured. Despite being one of the oldest known web vulnerabilities, SQL Injection continues to pose a significant threat, especially in legacy or poorly maintained systems.
 
@@ -114,7 +113,7 @@ This exercise highlights how even a basic SQL Injection attack can have severe c
 
 Working with DVWA in an isolated lab environment strengthened my understanding of injection attacks and reinforced the importance of secure coding practices in real-world applications.
 
-📌 Disclaimer
+### 📌 Disclaimer
 
 This demonstration was conducted solely for educational purposes within a legally authorized testing environment. Unauthorized testing on live systems is strictly prohibited.
 
