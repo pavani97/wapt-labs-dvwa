@@ -34,7 +34,7 @@ Initial reconnaissance was performed to identify the target system and available
 #### Accessing the Web Application
 
 The DVWA application was accessed through a web browser using the following URL:
-![DVWA Login Page](screenshots/(Screenshot(145).png)
+![DVWA Login Page](screenshots/Screenshot (146).png)
 
 
    http://192.168.168.93.130/ (replace with your dvwa url)
@@ -57,7 +57,7 @@ Knowing that the application is vulnerable to SQL Injection, a malicious payload
 1' OR '1'='1
 
 ---
-![DVWA Login Page](screenshots/(Screenshot(146).png)
+![DVWA Login Page](screenshots/Screenshot (145).png)
 ### 🧠 SQL Logic Explanation
 
 #### Normal Query Behavior
