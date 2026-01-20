@@ -34,17 +34,32 @@ To bypass this restriction and inject a payload into the **Name** field, a paylo
 
 ```html
 <img src="x" onerror="alert('stored xss');">
+```
+
 I attempted to input the payload into the name field, but encountered client-side restrictions that limit users to entering a maximum of 10 characters, as shown below.
 
-To bypass this limitation, right-click on the name input field, select Inspect, and then modify the maxlength="10" attribute to a different value, such as "90". After making this adjustment, press Enter to apply the changes, as illustrated below.
+To bypass this limitation, right-click on the name input field, select **Inspect**, and then modify the `maxlength="10"` attribute to a different value, such as `"90"`. After making this adjustment, press **Enter** to apply the changes.
 
+```html
 <img src="x" onerror="alert('stored xss');">
-
+```
 
 Now, input the payload into the name field and enter any text in the message field. Afterward, click on the submit button.
 
-After clicking the Sign Guestbook button to inject the payload, we received a pop-up alert, which confirms the successful exploitation of this vulnerability at the medium security level.
+After clicking the **Sign Guestbook** button to inject the payload, we received a pop-up alert, which confirms the successful exploitation of this vulnerability at the **medium security level**.
+# High Level
 
+Click on **“DVWA Security,”** then choose the **“high” security level** and proceed by clicking the **“Submit”** button as shown below.
+
+Since the field has been sanitized to exclude special characters, our payload, which does not include the `<script>` tag, can still be effective. Let’s proceed by injecting the payload into the **name field** and entering arbitrary text into the **message field**. Afterward, submit the form to observe the outcome.
+
+```html
+<iframe src="https//:hacked.com"></iframe>
+```
+
+I utilized the `<iframe>` tag, which is employed to embed one web page within another web page.
+
+Based on the obtained results, it is evident that the webpage has indeed been successfully embedded. If a user clicks on the link, they will be directed to the webpage specified in the script. This outcome unequivocally confirms the successful exploitation of this vulnerability at high security level.
 
 
 
