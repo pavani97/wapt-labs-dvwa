@@ -34,6 +34,9 @@ To run DVWA, the following components are required:
 ### Description
 - No input validation is applied.
 - All vulnerabilities are easy to exploit.
+   ![DVWA Login Page](screenshots/dom1.webp)
+
+   ![DVWA Login Page](screenshots/dom2.webp)
 
 ### Payload
 http://127.0.0.1/dvwa/vulnerabilities/xss_d/?default=
@@ -60,9 +63,13 @@ http://127.0.0.1/dvwa/vulnerabilities/xss_d/?default=
 - This protection is ineffective and can be bypassed.
 - JavaScript can still execute without using `<script>` tags.
 
+   ![DVWA Login Page](screenshots/dom3.webp)
+
+   ![DVWA Login Page](screenshots/dom4.webp)
+
 ### Payload
 http://127.0.0.1/dvwa/vulnerabilities/xss_d/?default=
-</select><xss onfocus=alert(1) autofocus tabindex=1>
+<select><xss onfocus=alert(1) autofocus tabindex=1></select>
 
 ### Payload Explanation
 1. Browser loads the page  
@@ -88,6 +95,8 @@ http://127.0.0.1/dvwa/vulnerabilities/xss_d/?default=
 - Enforces a whitelist of allowed languages.
 - Attackers must rely entirely on client-side execution.
 
+   ![DVWA Login Page](screenshots/dom5.webp)
+
 ### Payload
 http://127.0.0.1/dvwa/vulnerabilities/xss_d/#default=
 <script>alert(document.cookie)</script>
@@ -112,6 +121,8 @@ http://127.0.0.1/dvwa/vulnerabilities/xss_d/#default=
 - Data taken from the URL is automatically encoded by the browser.
 - Injected JavaScript is rendered harmless.
 - No script execution is possible.
+  
+   ![DVWA Login Page](screenshots/dom6.webp)
 
 ---
 
